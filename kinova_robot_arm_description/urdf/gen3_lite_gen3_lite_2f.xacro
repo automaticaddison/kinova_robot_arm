@@ -9,7 +9,7 @@
   <xacro:property name="dof" value="6" />
   <xacro:property name="gripper" value="gen3_lite_2f" />
   <xacro:property name="parent" default="world" />
-  <xacro:property name="prefix" default="kinova" />
+  <xacro:property name="prefix" default="kinova_" />
 
   <!-- Define the load_robot macros -->
   <xacro:macro name="load_robot" params="
