@@ -21,20 +21,28 @@ This package provides ROS 2 support for the Kinova Gen3 Lite robotic arm. It inc
 
 ## Usage
 
-To use this description in your ROS 2 projects:
+To view this robot in RViz:
 
 1. Clone this repository into your ROS 2 workspace
-2. Build your workspace
-3. Launch the robot model in RViz visualization.
+2. Build your workspace (i.e. colcon build)
+3. Install the urdf_tutorial package for your ROS distribution:
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-urdf-tutorial
+```
+
+4. To launch the URDF model viewer, use the following command:
+
+```bash
+ros2 launch urdf_tutorial display.launch.py model:=/home/ubuntu/ros2_ws/src/kinova_robot_arm/kinova_robot_arm_description/urdf/gen3_lite_gen3_lite_2f.xacro
+```
+This command will launch the URDF viewer with the specified Kinova Gen3 Lite robot arm model. 
+
+5. Remember to set the Fixed Frame under "Global Options" in RViz to the 'world' frame.
 
 ## Dependencies
 
 - ROS 2 (tested on ROS 2 Iron)
-- `xacro`
-- `robot_state_publisher`
-- `joint_state_publisher`
-- `rviz2` (for visualization)
-- `gazebo_ros` (for simulation)
 
 ## License
 
